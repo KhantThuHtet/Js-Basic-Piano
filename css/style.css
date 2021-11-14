@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --bg-color: #acdeaa;
+    --text: #47525f;
+    --keypad: #8fbbaf;
+    --btn: #6583a8;
+}
+
+.container{
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text);
+    display: flex;
+    flex-flow: column;
+}
+
+.record-input{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.record-input input{
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    min-width: 200px;
+    max-width: 1000px;
+    text-indent: 10px;
+}
+
+.record-input input:focus{
+    outline: none;
+}
+
+.record-input button{
+    padding: 5px 20px;
+    background-color: #6fbbc7;
+    color: #132b49;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+
+.record-display{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.record-box{
+    margin: 0 auto;
+    padding: 10px;
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+}
+
+.record-list{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    cursor: pointer;
+    background-color: #a4d3a2;
+    border-radius: 4px;
+    padding: 5px 8px;
+}
+
+.record-list p{
+    margin-right: 10px;
+    font-style: italic;
+}
+
+.record-list button{
+    background-color: var(--keypad);
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transform: skew(-3deg, -1deg);
+    color: #114638;
+}
+
+.keypad-container{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keypad{
+    flex: 1 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--keypad);
+    font-size: 1.6em;
+    font-weight: bold;
+    border: 1px solid #78a077;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.active{
+    background-color: #78a077;
+}
